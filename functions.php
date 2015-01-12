@@ -56,21 +56,10 @@ function edda_theme_setup() {
 		)
 	);
 
-	/*
-	 * Registers default headers for the theme.  If you don't want to add custom headers, remove
-	 * this section. Note: Header thumbnail sizes should be 230x78.
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/register_default_headers
-	 */
-	//register_default_headers();
-
-	/*
-	 * Uncomment to add custom default backgrounds.  See the `edda_default_backgrounds()`
-	 * function below.  Remove this section and that function if you do not wish to use this feature.
-	 */
-	//add_filter( 'hybrid_default_backgrounds', 'edda_default_backgrounds' );
-
 	remove_action( 'wp_head', array( Saga_Custom_Colors::get_instance(), 'wp_head_callback' ) );
+
+	/* Handle content width for embeds and images. */
+	hybrid_set_content_width( 920 );
 }
 
 /**
