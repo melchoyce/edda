@@ -1,0 +1,425 @@
+/**
+ * Theme Name:  Edda
+ * Theme URI:   http://yoursite.com/link/to/theme
+ * Description: Edda is a child theme of the Saga theme. Featuring a narrower content area and sepia-toned images, Edda takes the elegance of Saga and gives it a new tone. With room for your big, beautiful photos and displaying elegant, classical type, Edda is built for dedicated writers and bloggers like you to showcase your work.
+ * Version:     1.0.0
+ * Author:      Mel Choyce
+ * Author URI:  http://choycedesign.com
+ * Text Domain: edda
+ * Tags:        custom-background, custom-header
+ * License:     GNU General Public License v2.0 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Template:    saga
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400);
+@import url(http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:500);
+
+time[title] {
+	cursor: default;
+}
+
+#container>.wrap,
+#header,
+#footer,
+#main {
+	max-width: 920px;
+}
+
+#container>.wrap {
+	margin-top: 4rem;
+}
+
+#header {
+	margin: 0;
+	background: #e5be5e;
+}
+
+#branding {
+	padding: 1em 0 1em 2em;
+}
+
+#menu-primary {
+	padding: 0;
+}
+
+#menu-primary button {
+	display: inline-block;
+	padding: 1.61rem 2rem;
+}
+
+a:focus,
+.featured-media a:focus img {
+	outline: none;
+}
+a:focus img {
+	border: none;
+}
+#menu-primary .menu-items>li:first-of-type>a:focus,
+#menu-primary li a:focus {
+	border-color: rgba(255,255,255,.15);
+}
+
+#site-description {
+	padding-top: 5px;
+}
+
+a img {
+	opacity: 1;
+}
+
+input[type=submit]:focus,
+input[type=submit]:hover,
+input[type=reset]:focus,
+input[type=reset]:hover,
+input[type=button]:focus,
+input[type=button]:hover,
+button:focus, button:hover,
+.menu-toggle button:hover,
+.media-info-toggle:hover,
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+input[type=number],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email], input[type=month],
+input[type=password], input[type=search],
+input[type=tel], input[type=text],
+input[type=time],
+input[type=url],
+input[type=week], textarea, select {
+	background: #fff;
+}
+
+input[type=submit],
+input[type=reset],
+input[type=button],
+button {
+	background-color: #e0b551;
+}
+
+legend {
+	border-color: #e5e5e5;
+}
+
+.menu-toggle button,
+.loop-pagination .page-numbers,
+#menu-primary li a {
+	text-shadow: none;
+}
+
+#menu-primary li a {
+	padding: .25rem 1.5rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.15);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+a,
+.entry-subtitle,
+label {
+	-webkit-transition: all 0.025s ease-in-out;
+	-moz-transition: all 0.025s ease-in-out;
+	-o-transition: all 0.025s ease-in-out;
+	transition: all 0.025s ease-in-out;
+}
+
+input[type="number"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
+	-webkit-transition: all 0.025s ease-in-out;
+	-moz-transition: all 0.025s ease-in-out;
+	-o-transition: all 0.025s ease-in-out;
+	transition: all 0.025s ease-in-out;
+}
+
+a img {
+	-webkit-transition: all 0.025s ease-in-out;
+	-moz-transition: all 0.025s ease-in-out;
+	-o-transition: all 0.025s ease-in-out;
+	transition: all 0.025s ease-in-out;
+}
+
+.main .entry-subtitle {
+	font-size: 22px;
+}
+
+.singular .entry>.wrap,
+.error-404 .entry>.wrap,
+#comments-template {
+	max-width: 700px;
+}
+
+.entry-title:after {
+	content: "";
+	display: block;
+	height: 2px;
+	width: 50%;
+	margin: 1.5rem auto 1.75;
+}
+
+.entry-title::after {
+	background: rgba(119, 119, 119, 0.1);
+}
+
+.plural .entry-title::after {
+	display: block;
+}
+
+.plural .entry-byline {
+	margin: 0 0 1.125rem;
+}
+
+.entry>.wrap, .plural .entry,
+.singular .main,
+.error-404 .main {
+	background-color: rgba(255, 255, 255, 0.95);
+}
+
+.wrap,
+.entry>.wrap,
+.plural .entry>.wrap {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.plural .entry>.wrap {
+	padding-left: 4rem;
+	padding-right: 4rem;
+}
+
+.plural .entry,
+.more-link-wrap {
+	margin-bottom: 3rem;
+}
+
+.featured-media img {
+	-webkit-filter: sepia(100%);
+	filter: sepia(100%)
+}
+
+.featured-media img:hover {
+	filter: none;
+}
+
+ /* ====== Primary Font ====== */
+
+body,
+.main .entry-subtitle,
+button,
+.font-primary {
+	font-family: 'Alegreya', serif;
+	font-weight: 300;
+}
+
+/* ====== Secondary Font ====== */
+
+blockquote,
+dt,
+.entry-byline .entry-author a,
+var,
+.font-secondary {
+	font-family: 'Vollkorn', Georgia, serif;
+	font-weight: 400;
+}
+
+/* ====== Tertiary Font ====== */
+
+#site-title,
+#menu-primary li a,
+.entry-byline,
+.entry-byline .entry-author a,
+.more-link-wrap,
+.entry-footer,
+.comment-published,
+.comment-permalink,
+.comment-edit-link,
+button,
+input[type=submit],
+input[type=reset],
+input[type=button],
+#footer {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.comment-published,
+.comment-permalink,
+.comment-edit-link,
+input[type=submit],
+input[type=reset],
+input[type=button],
+#footer,
+.entry-footer {
+	font-size: 75%;
+}
+
+#menu-primary li a,
+.entry-byline {
+	font-size: 85%;
+}
+
+.entry-byline .entry-author a {
+	font-size: 100%;
+	font-style: normal;
+	color: #E0B551;
+}
+
+/* ====== Headlines Font ====== */
+
+h1, h2, h3, h4, h5, h6,
+.font-headlines {
+	font-family: 'Vollkorn', Georgia, serif;
+	font-weight: 400;
+}
+
+/* Colors */
+
+body,
+p {
+	color: #3c362e;
+}
+
+::selection {
+	color: inherit;
+}
+
+a,
+a:focus,
+a:active,
+a:visited {
+	color: #e0b551;
+}
+
+a:hover {
+	color: #d6a940;
+}
+
+.entry-title a {
+	color: #3c362e;
+}
+
+.entry-title .entry-subtitle {
+	font-style: italic;
+	opacity: .5;
+}
+
+.menu-toggle button,
+#menu-primary li a {
+	background: #e0b551;
+}
+
+.menu-toggle button:hover,
+.menu-toggle button:focus,
+#menu-primary li a:hover,
+#menu-primary li a:focus,
+.loop-pagination a:hover,
+.loop-pagination a:focus,
+.loop-pagination .current {
+	background-color: #d8892c;
+}
+
+.entry-header,
+.entry-footer,
+.media-meta .data,
+.comments-closed,
+.comment-meta, label,
+.logged-in-as,
+.form-allowed-tags,
+.comment-notes,
+.comments-nav .page-numbers {
+	color: #cabfb2;
+}
+
+.ltr .comment-reply-link,
+.ltr .comment-reply-login,
+a.comment-edit-link {
+	color: #e0b551;
+}
+
+@media only screen and (max-width: 1100px) {
+
+	#header,
+	#main,
+	#footer {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	#container>.wrap {
+		margin-top: 0;
+	}
+
+}
+
+@media only screen and ( min-width: 900px ) {
+
+	.singular .entry .featured-media + .wrap {
+		position: relative;
+		margin-top: 0rem;
+		padding-top: 3rem;
+	}
+
+	.plural .featured-media+.wrap {
+		position: relative;
+		top: -1px;
+		max-width: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 850px) {
+
+	#branding {
+		float: left;
+		display: inline-block;
+	}
+	#menu-primary {
+		float: right;
+		display: inline-block;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+
+	#branding {
+		float: none;
+		display: block;
+	}
+	#menu-primary {
+		float: none;
+		display: block;
+	}
+	#menu-primary button {
+		display: block;
+		text-align: center;
+		width: 100%;
+	}
+	#menu-primary>.wrap {
+		left: 0;
+		margin-left: 0;
+		width: 100%;
+	}
+	.plural .entry>.wrap {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+}
