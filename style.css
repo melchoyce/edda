@@ -124,7 +124,6 @@ a,
 label {
 	-webkit-transition: all 0.025s ease-in-out;
 	-moz-transition: all 0.025s ease-in-out;
-	-o-transition: all 0.025s ease-in-out;
 	transition: all 0.025s ease-in-out;
 }
 
@@ -145,14 +144,12 @@ textarea,
 select {
 	-webkit-transition: all 0.025s ease-in-out;
 	-moz-transition: all 0.025s ease-in-out;
-	-o-transition: all 0.025s ease-in-out;
 	transition: all 0.025s ease-in-out;
 }
 
 a img {
 	-webkit-transition: all 0.025s ease-in-out;
 	-moz-transition: all 0.025s ease-in-out;
-	-o-transition: all 0.025s ease-in-out;
 	transition: all 0.025s ease-in-out;
 }
 
@@ -210,11 +207,16 @@ a img {
 
 .featured-media img {
 	-webkit-filter: sepia(100%);
-	filter: sepia(100%)
+	filter: sepia(100%);
+
+	-webkit-transition: -webkit-filter 0.25s ease-in-out;
+	-moz-transition: filter 0.25s ease-in-out;
+	transition: -webkit-filter 0.25s ease-in-out;
 }
 
 .featured-media img:hover {
-	filter: none;
+	-webkit-filter: sepia(0);
+	filter: sepia(0);
 }
 
  /* ====== Primary Font ====== */
