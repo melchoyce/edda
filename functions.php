@@ -8,7 +8,7 @@
  * example, if your theme name is "Super Duper", your slug should be `super_duper_`.
  *
  * @package    Edda
- * @author     Mel Choyce <melchoyce@gmail.com>
+ * @author     Mel Choyce
  * @copyright  Copyright (c) 2014, Mel Choyce
  * @link       http://yoursite.com/link/to/theme
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
