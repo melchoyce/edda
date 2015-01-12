@@ -12,7 +12,9 @@ This theme uses the [Subtitles Plugin](http://wordpress.org/plugins/subtitles) t
 
 ## Credits
 
-* [Image used in theme screenshot](https://unsplash.com/photos/yypv2Tu-mxU/) by [Julia Revitt](https://unsplash.com/juliarevitt) - Licensed under [CC0](http://creativecommons.org/choose/zero).
+Theme screenshot:
+
+* [Image](https://unsplash.com/photos/yypv2Tu-mxU/) by [Julia Revitt](https://unsplash.com/juliarevitt) - Licensed under [CC0](http://creativecommons.org/choose/zero).
 
 The following resources are not included with the theme, but are external resources linked to within the theme:
 
