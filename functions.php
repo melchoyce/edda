@@ -1,16 +1,8 @@
 <?php
 /**
- * This is your theme's `functions.php` file.  It's a dangerous but really powerful tool.  It essentially
- * gives you the power of a plugin developer from within the confines of a theme.  Use this feature
- * wisely, please.
- *
- * Make sure to change the `edda_` function prefix to a prefix that matches your theme name.  For
- * example, if your theme name is "Super Duper", your slug should be `super_duper_`.
- *
  * @package    Edda
  * @author     Mel Choyce
  * @copyright  Copyright (c) 2014, Mel Choyce
- * @link       http://yoursite.com/link/to/theme
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
