@@ -37,7 +37,6 @@ function edda_theme_setup() {
 		'custom-background',
 		array(
 			'default-color' => '2b261f',
-			'default-image' => '',
 		)
 	);
 
@@ -69,36 +68,6 @@ function edda_scripts() {
 	wp_enqueue_script( 'edda', get_stylesheet_directory_uri() . '/js/edda.js', array( 'saga' ), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'edda_scripts', 25 );
-
-
-/**
- * This works just like the WordPress `register_default_headers()` function.  You're just setting up an
- * array of backgrounds.  The following backgrounds are merely examples from the parent theme.  Please
- * don't use them.  Use your own backgrounds.  Or, remove this section (and the `add_filter()` call earlier)
- * if you don't want to register custom backgrounds.
- *
- * Note: Background thumbnail sizes should be 230x78.
- *
- * @since  1.0.0
- * @access public
- * @param  array  $backgrounds
- * @return array
- */
-function edda_default_backgrounds( $backgrounds ) {
-
-	$new_backgrounds = array(
-		'example-1' => array(
-			'url'           => '%2$s/images/backgrounds/example-1.png',
-			'thumbnail_url' => '%2$s/images/backgrounds/example-1-thumb.png',
-		),
-		'example-2' => array(
-			'url'           => '%2$s/images/backgrounds/example-2.png',
-			'thumbnail_url' => '%2$s/images/backgrounds/example-2-thumb.png',
-		),
-	);
-
-	return array_merge( $new_backgrounds, $backgrounds );
-}
 
 /**
  * Remove icon from the before the site title
