@@ -26,6 +26,6 @@ The following resources are not included with the theme, but are external resour
 
 ## Changelog
 
-### Version 1.0.3
+### Version 1.0.4
 
 * First public release of theme. Huzzah!

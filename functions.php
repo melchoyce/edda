@@ -49,6 +49,53 @@ function edda_theme_setup() {
 
 	remove_action( 'wp_head', array( Saga_Custom_Colors::get_instance(), 'wp_head_callback' ) );
 
+	function edda_slug_fonts_url() {
+	    $fonts_url = '';
+
+	    /* Translators: If there are characters in your language that are not
+	    * supported by vollkorn, translate this to 'off'. Do not translate
+	    * into your own language.
+	    */
+	    $vollkorn = _x( 'on', 'Vollkorn font: on or off', 'theme-slug' );
+
+	    /* Translators: If there are characters in your language that are not
+	    * supported by alegreya, translate this to 'off'. Do not translate
+	    * into your own language.
+	    */
+	    $alegreya = _x( 'on', 'Alegreya font: on or off', 'theme-slug' );
+
+	    /* Translators: If there are characters in your language that are not
+	    * supported by alegreya, translate this to 'off'. Do not translate
+	    * into your own language.
+	    */
+	    $ubuntu = _x( 'on', 'Ubuntu font: on or off', 'theme-slug' );
+
+	    if ( 'off' !== $vollkorn || 'off' !== $alegreya || 'off' !== $ubuntu ) {
+	        $font_families = array();
+
+	        if ( 'off' !== $vollkorn ) {
+	            $font_families[] = 'vollkorn:400';
+	        }
+
+	        if ( 'off' !== $alegreya ) {
+	            $font_families[] = 'alegreya:400italic,700italic,400,700';
+	        }
+
+	        if ( 'off' !== $ubuntu ) {
+	            $font_families[] = 'ubuntu:500';
+	        }
+
+	        $query_args = array(
+	            'family' => urlencode( implode( '|', $font_families ) ),
+	            'subset' => urlencode( 'latin,latin-ext' ),
+	        );
+
+	        $fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+	    }
+
+	    return $fonts_url;
+	}
+
 	/* Handle content width for embeds and images. */
 	hybrid_set_content_width( 920 );
 }
@@ -57,6 +104,8 @@ function edda_theme_setup() {
  * Enqueue scripts and styles.
  */
 function edda_scripts() {
+	wp_dequeue_style( 'saga-fonts' );
+	wp_enqueue_style( 'edda-fonts', edda_slug_fonts_url(), array(), null );
 	wp_enqueue_script( 'edda', get_stylesheet_directory_uri() . '/js/edda.js', array( 'saga' ), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'edda_scripts', 25 );
@@ -68,6 +117,7 @@ function edda_remove_customizer_settings( $wp_customize ) {
 	$wp_customize->remove_setting( 'header_icon' );
 	$wp_customize->remove_setting( 'color_menu' );
 	$wp_customize->remove_setting( 'color_primary' );
+	$wp_customize->remove_control( 'saga-header-icon' );
 	$wp_customize->remove_control( 'custom-colors-menu' );
 	$wp_customize->remove_control( 'custom-colors-primary' );
 }
